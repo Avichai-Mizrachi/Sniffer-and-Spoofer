@@ -122,39 +122,9 @@ void got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *pa
     }
     double_seperator();
   }
-  else if (iph->protocol == IPPROTO_ICMP)
-  {
-    fprintf(file, "ICMP\n");
-    seperator();
-    struct icmphdr *icmph = (struct icmphdr *)(packet + sizeof(struct iphdr) + eth_length);
-    fprintf(file, "Type : %d", (unsigned int)(icmph->type));
-    if ((unsigned int)(icmph->type) == 11)
-    {
-      fprintf(file, "  (TTL Expired)\n");
-    }
-    else if ((unsigned int)(icmph->type) == ICMP_ECHOREPLY)
-    {
-      fprintf(file, "  (ICMP Echo Reply)\n");
-    }
-
-    fprintf(file, "Code : %d\n", (unsigned int)(icmph->code));
-    fprintf(file, "Checksum : %d\n", ntohs(icmph->checksum));
-    double_seperator();
-
-    int dataSize = header->len - eth_length - sizeof(struct iphdr) - sizeof(struct icmphdr);
-    if (dataSize > 0)
-    {
-      fprintf(file, "DATA\n");
-      char *data = (char *)(packet + eth_length + sizeof(struct iphdr) + sizeof(struct icmphdr));
-      print_data(data, dataSize);
-      printf("size of data: %d\n", dataSize);
-      fprintf(file, "\n\n");
-    }
-    double_seperator();
-  }
   else
   {
-    printf("Not tcp or icmp\n");
+    printf("Not tcp\n");
   }
 };
 
