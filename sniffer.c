@@ -33,20 +33,7 @@ int main()
   }
 
   // Step 2: Compile filter_exp into BPF psuedo-code
-  int part;
-  printf("Enter 1 for sniffing task2 or 2 for sniffing task4.\n");
-  scanf("%d", &part);
-  switch (part)
-  {
-  case 1:
-    filter_exp = FIRST_PART;
-    break;
-  case 2:
-    filter_exp = THIRD_PART;
-    break;
-  default:
-    printerror();
-  }
+  filter_exp = FIRST_PART;
 
   if (pcap_compile(handle, &fp, filter_exp, 0, net) == -1)
   {
