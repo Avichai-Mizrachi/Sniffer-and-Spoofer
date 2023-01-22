@@ -25,4 +25,4 @@ all: sniffer spoofer snoofer
 .Phony: clean
 
 clean:
-	rm *.o sniffer spoofer 208465872_323968859.txt
+	rm *.o sniffer spoofer 208465872_323968859.txt snoofer
