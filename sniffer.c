@@ -137,11 +137,8 @@ void got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *pa
       fprintf(file, "  (ICMP Echo Reply)\n");
     }
 
-    // need to be checked
-    uint16_t cksum = ntohs(icmph->checksum);
-    unsigned int code = (unsigned int)(icmph->code);
-    fprintf(file, "Code : %d\n", code);
-    fprintf(file, "Checksum : %d\n", cksum);
+    fprintf(file, "Code : %d\n", (unsigned int)(icmph->code));
+    fprintf(file, "Checksum : %d\n", ntohs(icmph->checksum));
     double_seperator();
 
     int dataSize = header->len - eth_length - sizeof(struct iphdr) - sizeof(struct icmphdr);
