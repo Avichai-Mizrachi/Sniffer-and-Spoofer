@@ -35,6 +35,7 @@ Sniffer-and-Spoofer/
 ```bash
 git clone https://github.com/Avichai-Mizrachi/Sniffer-and-Spoofer.git
 cd Sniffer-and-Spoofer
+```
 
 2.	Compile the C components:
 
