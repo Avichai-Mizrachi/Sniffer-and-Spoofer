@@ -12,14 +12,23 @@ This project combines two key components: a **Sniffer** and a **Spoofer**, for a
 ## Project Structure
 
 Sniffer-and-Spoofer/
+
 ├── .vscode/           # VSCode settings
+
 ├── pycache/       # Python cache
+
 ├── api.py             # API interface for control and communication
+
 ├── calculator.py      # Contains calculation logic (e.g. checksums, validations)
+
 ├── client.py          # Client application to send commands
+
 ├── server.py          # Server application to manage sniffer/spoofer
+
 ├── makefile           # Build file for compiling C components
+
 ├── sniffer.c/h        # C implementation of the sniffer
+
 ├── spoofer.c/h        # C implementation of the spoofer
 
 ## Requirements
