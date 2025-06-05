@@ -51,7 +51,7 @@ python3 server.py
 ```bash
 python3 client.py
 
-##Usage
+## Usage
 
 Once the client and server are running, you can use the interface to:
 	•	Start packet sniffing
@@ -60,10 +60,10 @@ Once the client and server are running, you can use the interface to:
 
 ⚠️ Warning: This tool is intended for educational and controlled testing purposes only. Unauthorized use may violate laws and regulations.
 
-##Contributing
+## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request with improvements or bug fixes.
 
-##Project by
+## **Project by**
 
 Avichai Mizrachi
