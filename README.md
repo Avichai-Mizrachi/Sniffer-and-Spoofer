@@ -40,16 +40,19 @@ cd Sniffer-and-Spoofer
 
 ```bash
 make
+```
 
 3.	Run the server:
 
 ```bash
 python3 server.py
+```
 
 4.	Run the client:
 
 ```bash
 python3 client.py
+```
 
 ## Usage
 
@@ -64,6 +67,6 @@ Once the client and server are running, you can use the interface to:
 
 Contributions are welcome! Please open an issue or submit a pull request with improvements or bug fixes.
 
-## **Project by**
+## Project by
 
 Avichai Mizrachi
